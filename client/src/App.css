@@ -1,0 +1,323 @@
+/* ===============================
+   GLOBAL RESET & BASE
+================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f6f8ff;
+  color: #111827;
+}
+
+/* ===============================
+   ROOT APP CONTAINER
+================================ */
+#root {
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   COMMON ELEMENTS
+================================ */
+button {
+  font-family: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===============================
+   SCROLLBAR (DESKTOP)
+================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5b4fc;
+}
+
+/* ===============================
+   PAGE CONTAINER
+================================ */
+.page-container {
+  padding: 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   CARD (REUSABLE)
+================================ */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ===============================
+   HEADINGS
+================================ */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===============================
+   TEXT HELPERS
+================================ */
+.text-muted {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ===============================
+   BUTTON VARIANTS
+================================ */
+.btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+}
+
+.btn-outline:hover {
+  background: #f3f4f6;
+}
+
+/* ===============================
+   FORM HELPERS
+================================ */
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* ===============================
+   RESPONSIVE HELPERS
+================================ */
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-container {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/* ================= LOGIN PAGE ================= */
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  background: #f5f7fb;
+}
+
+/* LEFT SIDE */
+.auth-form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+
+/* BIG LOGO */
+.logo-wrapper {
+  margin-bottom: 30px;
+}
+
+.auth-logo {
+  width: 260px;
+  height: auto;
+}
+
+/* INPUTS */
+.auth-form input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* PASSWORD FIELD */
+.password-field {
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+/* BUTTON */
+.auth-form button {
+  margin-top: 20px;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #5b6cff, #7f53ff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* LINKS */
+.auth-link {
+  margin-top: 12px;
+  color: #555;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.auth-preview {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eef2ff;
+}
+
+/* IMAGE FIT */
+.preview-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-image {
+  width: 100%;
+  max-width: 650px;
+  object-fit: contain;
+}
+
+.logo-wrapper {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.auth-preview img {
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+}
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDE */
+
+.auth-form {
+  width: 50%;
+  padding: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* LOGO */
+
+.auth-logo {
+  width: 220px;
+  margin-bottom: 30px;
+}
+
+/* RIGHT SIDE */
+
+.auth-preview {
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* IMAGE FULL COVER */
+
+.preview-full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

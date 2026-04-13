@@ -1,0 +1,288 @@
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+.settings-page {
+  min-height: 100vh;
+  padding: 48px 16px;
+  background: linear-gradient(180deg, #f7f9fc 0%, #eef2ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ===============================
+   MAIN CARD (GLASSMORPHISM)
+================================ */
+.settings-card {
+  width: 100%;
+  max-width: 760px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* ===============================
+   HEADERS
+================================ */
+.settings-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+.settings-section {
+  margin-bottom: 36px;
+}
+
+.settings-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   SETTING ROWS
+================================ */
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 6px;
+  border-bottom: 1px solid rgba(226,232,240,0.8);
+  transition: all 0.25s ease;
+}
+
+.setting-row.clickable:hover {
+  background: rgba(99,102,241,0.06);
+  border-radius: 14px;
+}
+
+.setting-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.setting-desc {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.arrow {
+  font-size: 22px;
+  color: #94a3b8;
+}
+
+/* ===============================
+   TOGGLE SWITCH
+================================ */
+.switch {
+  position: relative;
+  width: 52px;
+  height: 28px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+/* =====================================================
+   QUESTION FLOW
+===================================================== */
+.back-btn {
+  background: none;
+  border: none;
+  color: #6366f1;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.progress {
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.question-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+/* =====================================================
+   OPTION SELECTOR (PHONEPE / GPAY STYLE)
+===================================================== */
+.option-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.option-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 2px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.option-card:hover {
+  border-color: #6366f1;
+  background: rgba(99,102,241,0.05);
+}
+
+.option-card.active {
+  border-color: #6366f1;
+  background: linear-gradient(
+    135deg,
+    rgba(99,102,241,0.12),
+    rgba(79,70,229,0.08)
+  );
+}
+
+.option-indicator {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #94a3b8;
+  position: relative;
+}
+
+.option-card.active .option-indicator {
+  border-color: #6366f1;
+}
+
+.option-card.active .option-indicator::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #6366f1;
+  border-radius: 50%;
+}
+
+.option-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* =====================================================
+   QUESTION ACTIONS
+===================================================== */
+.question-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primary-btn {
+  padding: 12px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =====================================================
+   MOBILE FIRST
+===================================================== */
+@media (max-width: 640px) {
+  .settings-card {
+    padding: 24px;
+  }
+
+  .question-title {
+    font-size: 20px;
+  }
+}
+
+/* =====================================================
+   DARK MODE
+===================================================== */
+body.dark .settings-page {
+  background: #020617;
+}
+
+body.dark .settings-card {
+  background: rgba(15,23,42,0.9);
+}
+
+body.dark .setting-title,
+body.dark .question-title,
+body.dark .option-text {
+  color: #e5e7eb;
+}
+
+body.dark .setting-desc,
+body.dark .progress {
+  color: #94a3b8;
+}
+
+body.dark .option-card {
+  background: rgba(30,41,59,0.9);
+  border-color: #334155;
+}
+
+body.dark .option-card.active {
+  border-color: #6366f1;
+}
+
+body.dark .option-indicator {
+  border-color: #64748b;
+}

@@ -1,0 +1,127 @@
+/* ===============================
+   PAGE BACKGROUND
+================================ */
+.qr-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ===============================
+   CARD
+================================ */
+.qr-card {
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: 22px;
+  width: 360px;
+  text-align: center;
+
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.12),
+    0 8px 20px rgba(99, 102, 241, 0.15);
+}
+
+/* ===============================
+   HEADER
+================================ */
+.qr-card h2 {
+  margin-bottom: 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.qr-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+}
+
+/* ===============================
+   QR CONTAINER
+================================ */
+.qr-box {
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e7eb;
+}
+
+/* ===============================
+   USER DETAILS
+================================ */
+.qr-details {
+  margin-top: 20px;
+}
+
+.qr-name {
+  font-weight: 700;
+  font-size: 17px;
+  color: #111827;
+}
+
+.qr-mobile {
+  font-size: 14px;
+  color: #374151;
+  margin-top: 4px;
+}
+
+.qr-app {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+/* ===============================
+   INFO TEXT
+================================ */
+.qr-info {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ===============================
+   BADGE (OPTIONAL)
+================================ */
+.qr-app::before {
+  content: "✔ ";
+  color: #22c55e;
+}
+
+/* ===============================
+   DARK MODE SUPPORT
+================================ */
+body.dark .qr-page {
+  background: linear-gradient(180deg, #020617, #020617);
+}
+
+body.dark .qr-card {
+  background: #020617;
+  color: #e5e7eb;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+}
+
+body.dark .qr-box {
+  background: #020617;
+  border-color: #1e293b;
+}
+
+body.dark .qr-subtitle,
+body.dark .qr-info,
+body.dark .qr-app {
+  color: #9ca3af;
+}
+
+body.dark .qr-name {
+  color: #f9fafb;
+}
